@@ -13,7 +13,7 @@ namespace AzureAlanWei.Controllers
   {
     public String GetHello()
     {
-      return DateTime.Now.ToString();
+      return "Now " + DateTime.Now.ToString();
     }
   }
 }
