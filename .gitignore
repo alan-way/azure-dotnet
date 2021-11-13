@@ -1,0 +1,5 @@
+.DS_Store
+bin/
+obj/
+wwwroot/
+front-end/node_modules
