@@ -11,9 +11,12 @@ namespace AzureAlanWei.Controllers
   [ApiController]
   public class HelloController : ControllerBase
   {
-    public String GetHello()
+    public async Task<String> GetHello()
     {
-      return "Now " + DateTime.Now.ToString();
+      HttpClient client = new HttpClient();
+      String result = await client.GetStringAsync("https://api.ituring.com.cn/api/Page/Home");
+      this.Response.Headers.ContentType = "application/json";
+      return result;
     }
   }
 }
