@@ -9,5 +9,9 @@
     "wwwroot": true,
     "bin": true,
     "obj": true
+  },
+  "files.watcherExclude": {
+    "**/.git/**": true,
+    "**/node_modules/**": true
   }
 }
