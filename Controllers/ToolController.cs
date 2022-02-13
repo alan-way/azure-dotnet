@@ -11,7 +11,7 @@ namespace AzureAlanWei.Controllers
   [ApiController]
   public class ToolController : ControllerBase
   {
-    public async String qrCode(String text)
+    public async Task<String> qrCode(String text)
     {
       return "ok";
     }
