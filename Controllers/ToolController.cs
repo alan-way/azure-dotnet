@@ -15,5 +15,12 @@ namespace AzureAlanWei.Controllers
     {
       return "ok";
     }
+    public async Task<HttpResponseMessage> download(String url)
+    {
+      HttpClient client = new HttpClient();
+      HttpResponseMessage response = await client.GetAsync(url) ;
+      Console.WriteLine($"code: ${response.StatusCode}");
+      return response;
+    }
   }
 }
